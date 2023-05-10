@@ -6,4 +6,38 @@
 <h2>Index</h2>
 <h3>456</h3>
 
+@using (Html.BeginForm("Index", "Text", FormMethod.Post))
+{
+    <div>
+        <p>
+            帳號:<input type="text" name="account" value="" /><br>
+        <p>
+            密碼:<input type="password" name="password" value="" /><br>
+        <p>
+            年齡:<input type="number" name="" value="" /><br>
+        <p>
+            性別:<input type="radio" name="gender" value="A"> 男生
+            <input type="radio" name="gender" value="B"> 女生<br>
+        <p>
+            興趣:<input type="checkbox" name="swiming" value="" />游泳
+            <input type="checkbox" name="read" value="" />閱讀
+            <input type="checkbox" name="See a movie" value="" />看電影
+    </div>
+}
+
+@using (Html.BeginForm("Index", "Text", FormMethod.Post))
+{
+    <div>
+
+        帳號:@Html.TextBox("account")<br>
+        密碼:@Html.Password("password")<br>
+        年齡:@Html.TextBox("age")<br>
+        性別:@Html.RadioButton("gender", "A") 男生
+            @Html.RadioButton("gender", "B") 女生<br>
+        興趣:@Html.CheckBox("reading", "A")閱讀
+            @Html.CheckBox("swiming", "B")游泳
+            @Html.CheckBox("See a movie", "C")看電影<br>
+        關於我:@Html.TextArea("about")
+    </div>
+}
 
